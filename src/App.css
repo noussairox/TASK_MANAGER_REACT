@@ -1,38 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import './tailwind.css';
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-[#FF9B50] flex justify-center items-center;
+}
+
 .App {
-  text-align: center;
+    @apply text-center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  @apply text-white mb-2 font-extrabold text-4xl;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoWrapper {
+    @apply bg-[#1a1a40] mt-24 p-14 rounded-lg shadow-2xl;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.TodoForm {
+  @apply space-x-2 mb-4 w-[100%];
 }
 
-.App-link {
-  color: #61dafb;
+.todo-input {
+  @apply outline-none bg-transparent border border-[#8758ff] rounded-lg text-white p-2 w-[300px]; 
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input::placeholder {
+  color: #ffffff4d;
 }
+
+.todo-btn {
+  @apply bg-[#8758ff] text-white px-2 py-2 rounded-lg;
+  cursor: pointer;
+  
+}
+
+.Todo {
+  @apply flex justify-between items-center bg-[#8758ff] text-white px-4 py-2 rounded-lg mb-2;
+  cursor: pointer;
+}
+
+.fa-trash {
+  @apply ml-3;
+}
+
+.completed {
+  @apply line-through text-[#94A684];
+}
+ 
